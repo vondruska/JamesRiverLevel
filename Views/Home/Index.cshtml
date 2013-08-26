@@ -1,0 +1,24 @@
+﻿@using JamesRiverLevel.Models
+@model JamesRiverLevel.ViewModel.DisplayViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+Current Level: @(Model.WaterLevel)@(Model.WaterLevelUnit)
+
+@if (Model.ActionLevel == WaterLevelAction.LifeJacket)
+{
+    <p>By City of Richmond Law, you are required to <strong>wear a life jacket</strong>.</p>
+}
+
+@if (Model.ActionLevel == WaterLevelAction.LifeJacket)
+{
+    <p>By City of Richmond Law, you are required to <strong>have a permit to be on the river</strong>.</p>
+}
+
+@Model.WaterLevelWhen.ToString()
+
+@Model.ActionLevel
+
+
+<div style="position: absolute; bottom: 0; margin: 0 auto; text-align:center;">for informational use only and is not an offically endorsed by any party.<br />obey all posted signage and law enforcement personal. use your best judgement before entering water.<br />data from national weather service | website source<br />created by steven vondruska</div>
