@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" timezone="EST5EDT" originator="AKQ" name="JAMES RIVER  AT RICHMOND WESTHAM" id="RMDV2" xsi:noNamespaceSchemaLocation="http://weather.gov/ohd/hydroxc/schemas/hydrogen/HydroGenData.xsd" generationtime="2013-08-26T17:54:23+00:00">
+   <disclaimers>
+      <AHPSXMLversion>1.1</AHPSXMLversion>
+      <status>Experimental</status>
+      <quality trace="observed">not manually quality-controlled</quality>
+      <observed trace="observed" audience="public" />
+      <general audience="public" />
+      <standing trace="forecast" audience="internal" dignity="official">Forecast data shown here are guidance values only. Please refer to your local NWS office for the latest official public river forecasts.</standing>
+   </disclaimers>
+   <sigstages>
+      <low />
+      <action units="ft">9</action>
+      <bankfull units="ft">11</bankfull>
+      <flood units="ft">12</flood>
+      <moderate units="ft">15</moderate>
+      <major units="ft">22</major>
+      <record units="ft">28.62</record>
+   </sigstages>
+   <sigflows>
+      <low />
+      <action units="kcfs">22.2</action>
+      <bankfull units="kcfs">11</bankfull>
+      <flood units="kcfs">42</flood>
+      <moderate units="kcfs">66.7</moderate>
+      <major units="kcfs">167</major>
+      <record units="kcfs">313</record>
+   </sigflows>
+   <zerodatum units="ft MSL">98.82</zerodatum>
+   <rating dignity="official">
+      <datum flowUnits="kcfs" stage="2.7" flow="0.069" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.7" flow="0.074" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.7" flow="0.080" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.7" flow="0.086" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.7" flow="0.093" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.7" flow="0.099" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.106" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.113" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.120" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.127" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.134" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.142" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.150" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.157" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.165" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.8" flow="0.173" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.182" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.190" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.199" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.208" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.216" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.225" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.235" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.244" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.253" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="2.9" flow="0.263" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.273" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.283" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.293" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.303" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.313" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.324" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.334" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.345" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.356" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.367" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.0" flow="0.378" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.389" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.401" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.412" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.424" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.436" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.448" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.460" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.472" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.484" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.1" flow="0.496" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.509" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.522" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.534" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.547" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.560" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.573" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.587" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.600" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.614" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.2" flow="0.627" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.641" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.655" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.669" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.683" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.697" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.711" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.726" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.740" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.3" flow="0.755" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.770" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.785" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.800" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.815" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.830" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.845" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.861" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.876" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.892" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.4" flow="0.908" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="0.924" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="0.940" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="0.956" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="0.972" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="0.988" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="1.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="1.020" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="1.040" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="1.050" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="1.070" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.5" flow="1.090" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.110" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.120" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.140" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.160" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.180" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.190" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.210" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.230" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.250" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.6" flow="1.260" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.280" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.300" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.320" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.340" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.360" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.370" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.390" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.410" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.7" flow="1.430" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.450" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.470" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.490" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.510" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.530" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.550" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.570" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.590" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.610" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.8" flow="1.630" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.650" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.670" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.690" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.710" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.730" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.750" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.770" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.790" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.810" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="3.9" flow="1.830" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.850" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.870" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.890" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.910" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.940" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.960" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.980" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="2.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="2.020" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="2.040" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="2.070" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.090" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.110" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.130" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.150" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.180" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.200" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.220" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.240" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.1" flow="2.270" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.290" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.310" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.340" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.360" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.380" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.410" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.430" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.450" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.2" flow="2.480" stageUnits="ft" />
+   </rating>
+   <alt_rating dignity="computed">
+      <datum flowUnits="kcfs" stage="3.0" flow="0.324" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="4.0" flow="1.960" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="5.0" flow="4.540" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="6.0" flow="7.920" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="7.0" flow="12.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="8.0" flow="16.800" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="9.0" flow="22.200" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="10.0" flow="28.300" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="11.0" flow="34.900" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="12.0" flow="42.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="13.0" flow="49.500" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="14.0" flow="57.500" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="15.0" flow="66.700" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="16.0" flow="77.700" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="17.0" flow="89.900" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="18.0" flow="103.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="19.0" flow="117.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="20.0" flow="133.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="21.0" flow="149.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="22.0" flow="167.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="23.0" flow="186.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="24.0" flow="205.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="25.0" flow="227.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="26.0" flow="249.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="27.0" flow="273.000" stageUnits="ft" />
+      <datum flowUnits="kcfs" stage="28.0" flow="297.000" stageUnits="ft" />
+   </alt_rating>
+   <observed>
+      <datum>
+         <valid timezone="UTC">2013-08-26T17:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.92</primary>
+         <secondary name="Flow" units="kcfs">4.31</secondary>
+        <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T17:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.92</primary>
+         <secondary name="Flow" units="kcfs">4.31</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T17:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.93</primary>
+         <secondary name="Flow" units="kcfs">4.34</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T16:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.93</primary>
+         <secondary name="Flow" units="kcfs">4.34</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T16:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.93</primary>
+         <secondary name="Flow" units="kcfs">4.34</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T16:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.93</primary>
+         <secondary name="Flow" units="kcfs">4.34</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T16:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.94</primary>
+         <secondary name="Flow" units="kcfs">4.37</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T15:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.94</primary>
+         <secondary name="Flow" units="kcfs">4.37</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T15:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.94</primary>
+         <secondary name="Flow" units="kcfs">4.37</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T15:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.94</primary>
+         <secondary name="Flow" units="kcfs">4.37</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T15:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.94</primary>
+         <secondary name="Flow" units="kcfs">4.37</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T14:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.94</primary>
+         <secondary name="Flow" units="kcfs">4.37</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T14:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.94</primary>
+         <secondary name="Flow" units="kcfs">4.37</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T14:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.95</primary>
+         <secondary name="Flow" units="kcfs">4.4</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T14:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.95</primary>
+         <secondary name="Flow" units="kcfs">4.4</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T13:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.95</primary>
+         <secondary name="Flow" units="kcfs">4.4</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T13:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.95</primary>
+         <secondary name="Flow" units="kcfs">4.4</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T13:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.95</primary>
+         <secondary name="Flow" units="kcfs">4.4</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T13:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.95</primary>
+         <secondary name="Flow" units="kcfs">4.4</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T12:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.95</primary>
+         <secondary name="Flow" units="kcfs">4.4</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T12:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T12:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T12:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T11:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T11:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T11:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T11:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T10:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T10:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.96</primary>
+         <secondary name="Flow" units="kcfs">4.42</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T10:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.97</primary>
+         <secondary name="Flow" units="kcfs">4.45</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T10:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.97</primary>
+         <secondary name="Flow" units="kcfs">4.45</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T09:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.97</primary>
+         <secondary name="Flow" units="kcfs">4.45</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T09:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.97</primary>
+         <secondary name="Flow" units="kcfs">4.45</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T09:15:00-00:00</valid>
+         <primary name="Stage" units="ft">4.97</primary>
+         <secondary name="Flow" units="kcfs">4.45</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T09:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.98</primary>
+         <secondary name="Flow" units="kcfs">4.48</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T08:45:00-00:00</valid>
+         <primary name="Stage" units="ft">4.98</primary>
+         <secondary name="Flow" units="kcfs">4.48</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-26T08:30:00-00:00</valid>
+         <primary name="Stage" units="ft">4.98</primary>
+         <secondary name="Flow" units="kcfs">4.48</secondary>
+         <pedts>HGIRG</pedts>
+      </datum>
+   </observed>
+   <forecast>
+      <datum>
+         <valid timezone="UTC">2013-08-27T00:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.9</primary>
+         <secondary name="Flow" units="kcfs">4.25</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-27T06:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.8</primary>
+         <secondary name="Flow" units="kcfs">3.96</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-27T12:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.7</primary>
+         <secondary name="Flow" units="kcfs">3.68</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-27T18:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.7</primary>
+         <secondary name="Flow" units="kcfs">3.68</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-28T00:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.6</primary>
+         <secondary name="Flow" units="kcfs">3.41</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-28T06:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.6</primary>
+         <secondary name="Flow" units="kcfs">3.41</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-28T12:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.5</primary>
+         <secondary name="Flow" units="kcfs">3.14</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-28T18:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.5</primary>
+         <secondary name="Flow" units="kcfs">3.14</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-29T00:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.5</primary>
+         <secondary name="Flow" units="kcfs">3.14</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-29T06:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.5</primary>
+         <secondary name="Flow" units="kcfs">3.14</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+      <datum>
+         <valid timezone="UTC">2013-08-29T12:00:00-00:00</valid>
+         <primary name="Stage" units="ft">4.6</primary>
+         <secondary name="Flow" units="kcfs">3.41</secondary>
+         <pedts>HGIFE</pedts>
+      </datum>
+   </forecast>
+</site>
