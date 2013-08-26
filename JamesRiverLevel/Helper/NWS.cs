@@ -58,7 +58,7 @@
 
             viewModel.WaterLevel = test.primary.Value;
             viewModel.WaterLevelUnit = test.primary.units;
-            viewModel.WaterLevelWhen = test.valid.Value.ToLocalTime();
+            viewModel.WaterLevelWhen = TimeZoneInfo.ConvertTime(test.valid.Value, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
 
             if (viewModel.WaterLevel >= 5 && viewModel.WaterLevel < 9)
             {
