@@ -9,11 +9,16 @@
 
     using Models;
 
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
     using ViewModel;
 
     public class HomeController : Controller
     {
+        #if !DEBUG
         [OutputCache(Duration = 120)]
+        #endif
         public ActionResult Index()
         {
             var results = NWS.GetRiverInformation();

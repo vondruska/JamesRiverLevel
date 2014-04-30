@@ -4,21 +4,124 @@
     ViewBag.Title = "Index";
 }
 
-Current Level: @(Model.WaterLevel)@(Model.WaterLevelUnit)
-
-@if (Model.ActionLevel == WaterLevelAction.LifeJacket)
-{
-    <p>By City of Richmond Law, you are required to <strong>wear a life jacket</strong>.</p>
+@helper GetAlertClass() {
+    switch (Model.ActionLevel)
+    {
+        case WaterLevelAction.LifeJacket:
+            @:warning
+            break;
+            case WaterLevelAction.Permit:
+            @:alert
+            break;
+    }
 }
 
-@if (Model.ActionLevel == WaterLevelAction.Permit)
+@section scripts
 {
-    <p>By City of Richmond Law, you are required to <strong>have a permit to be on the river</strong>.</p>
-}
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script> $(function() {
+     $('#highchart').highcharts({
+        title: {
+            text: 'Water Level Forecast'
+        },
+        xAxis: {
+            type: 'datetime'
+        },
+        yAxis: {
+            min: 0,
+            title: { text: 'water level (ft)' }/*,
+            plotBands: [{
+                    from: 9,
+                    to: 14,
+                    color: 'rgba(68, 170, 213, 0.2)',
+                    label: {
+                        text: 'Last quarter\'s value range'
+                    }
+                }, {
+                    from: 14,
+                    to: 20,
+                    color: 'rgba(68, 170, 213, 0.2)',
+                    label: {
+                        text: 'Last quarter\'s value range'
+                    }
+                }
+            ]*/
+        },
+        series: [{
+                data: [
+                    @foreach (var item in Model.Observed)
+                    {
+                        @:{
+                        @:x: new Date('@(item.Key.ToString())').getTime(), y: @(item.Value), color: '#333', name: 'Observed Water Level'
+                        @:},
+                    }
+                    @foreach (var item in Model.Future)
+                    {
+                        @:{
+                        @:x: new Date('@(item.Key.ToString())').getTime(), y: @(item.Value)
+                        @:},
+                    }
+                ]
+            }
+        ],
+        tooltip: {
+            pointFormat: '<b>{point.y:.2f}</b> ft'
+        },
+        plotOptions: {
+            series: {
+                animation: false
+            }
+        }
+    });
+    
+     $('#display-forecast').click(function() {
+         $(this).hide();
+         $('#highchart').show();
+         $('.container').css('height', '820px');
+     })
+}); </script>
+    }
 
-@Model.WaterLevelWhen.ToString()
+    <div class="container">
+        <span class="large bold @GetAlertClass()">@(Model.WaterLevel)@(Model.WaterLevelUnit)</span> <br /><span class="grey">as of @Model.WaterLevelWhen.ToString("MMMM dd, yyyy a\\t hh:mm tt")</span><br /><br />
+        
+        @switch (Model.ActionLevel)
+        {
+            case WaterLevelAction.Permit:
+                <span class="medium">By law, you are required to <strong class="alert">have a permit to be on the river</strong>.</span>
+                break;
+            case WaterLevelAction.LifeJacket:
+                <span class="medium">By law, you are required to <strong class="warning">wear a life jacket</strong>.</span>
+                break;
+            case WaterLevelAction.None:
+                <span class="medium">No water level restrictions in place.</span>
+                break;
+        }
+        <br /><br /><br />
+        
+        @switch (Model.FloodingCategoryForecast)
+        {
+            case FloodingCategoryForecast.Flood:
+            case FloodingCategoryForecast.Moderate:
+            case FloodingCategoryForecast.Major:
+            case FloodingCategoryForecast.Record:
+                <span class="bold">Flooding is forecasted. Pay attention to the National Weather Service advisories and local media.</span><br />
+            break;
 
-@Model.ActionLevel
+    }
+        <a href="#" id="display-forecast">display water level forecast</a>
+        <div class="clear"></div>
+        <div id="highchart"></div>
+        
+        
+    </div>
+    
+
+<footer>for informational use only. obey all posted signage and law enforcement personal. do not make life decisions based on this information obtained here.<br /><a href="http://water.weather.gov/ahps2/hydrograph.php?wfo=akq&gage=rmdv2" target="_blank">data from national weather service</a> | created by <a href="http://stevenvondruska.com/" target="_blank">steven vondruska</a></footer>
+
+    
 
 
-<div style="position: absolute; bottom: 0; margin: 0 auto; text-align:center;">for informational use only and is not an offically endorsed by any party.<br />obey all posted signage and law enforcement personal. use your best judgement before entering water.<br />data from national weather service | website source<br />created by steven vondruska</div>
+
+
+    

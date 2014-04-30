@@ -130,6 +130,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\NWS.cs" />
+    <Compile Include="Models\FloodingCategoryForecast.cs" />
     <Compile Include="Models\HydroGenData.cs" />
     <Compile Include="ViewModel\DisplayViewModel.cs" />
     <Compile Include="Models\WaterLevelAction.cs" />

@@ -1,6 +1,7 @@
 ﻿namespace JamesRiverLevel.ViewModel
 {
     using System;
+    using System.Collections.Generic;
 
     using Models;
 
@@ -13,5 +14,11 @@
         public DateTime WaterLevelWhen { get; set; }
 
         public WaterLevelAction ActionLevel { get; set; }
+
+        public FloodingCategoryForecast FloodingCategoryForecast { get; set; }
+
+        public Dictionary<DateTime, float> Future { get; set; }
+
+        public Dictionary<DateTime, float> Observed { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace JamesRiverLevel.Helper
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Xml;
@@ -68,6 +69,27 @@
             {
                 viewModel.ActionLevel = WaterLevelAction.Permit;
             }
+
+            viewModel.Future = results.forecast.datum.ToDictionary(x => x.valid.Value, x => x.primary.Value);
+            viewModel.Observed = results.observed.OrderByDescending(x => x.valid.Value).Take(20).Where((x, i) => i % 5 == 0).Reverse().ToDictionary(x => TimeZoneInfo.ConvertTime(x.valid.Value, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")), x => x.primary.Value);
+
+            if (results.forecast.datum.Any(x => results.sigstages.record.Value <= x.primary.Value))
+                viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Record;
+
+            else if (results.forecast.datum.Any(x => results.sigstages.major.Value <= x.primary.Value))
+                viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Major;
+
+            else if (results.forecast.datum.Any(x => results.sigstages.moderate.Value <= x.primary.Value))
+                viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Moderate;
+
+            else if (results.forecast.datum.Any(x => results.sigstages.flood.Value <= x.primary.Value))
+                viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Flood;
+
+            else if (results.forecast.datum.Any(x => results.sigstages.bankfull.Value <= x.primary.Value))
+                viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Bankful;
+
+            else if (results.forecast.datum.Any(x => results.sigstages.action.Value <= x.primary.Value))
+                viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Action;
 
             return viewModel;
         }
