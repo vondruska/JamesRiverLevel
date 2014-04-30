@@ -7,6 +7,8 @@
     using System.Xml;
     using System.Xml.Serialization;
 
+    using MathNet.Numerics;
+
     using Models;
 
     using ViewModel;
@@ -60,6 +62,7 @@
             viewModel.WaterLevel = test.primary.Value;
             viewModel.WaterLevelUnit = test.primary.units;
             viewModel.WaterLevelWhen = TimeZoneInfo.ConvertTime(test.valid.Value, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+            viewModel.WaterLevelWhenUtc = test.valid.Value;
 
             if (viewModel.WaterLevel >= 5 && viewModel.WaterLevel < 9)
             {
@@ -71,7 +74,7 @@
             }
 
             viewModel.Future = results.forecast.datum.ToDictionary(x => x.valid.Value, x => x.primary.Value);
-            viewModel.Observed = results.observed.OrderByDescending(x => x.valid.Value).Take(20).Where((x, i) => i % 5 == 0).Reverse().ToDictionary(x => TimeZoneInfo.ConvertTime(x.valid.Value, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")), x => x.primary.Value);
+            viewModel.Observed = results.observed.OrderBy(x => x.valid.Value).Where(x => x.valid.Value > DateTime.UtcNow.AddHours(-24)).ToDictionary(x => TimeZoneInfo.ConvertTime(x.valid.Value, TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time")), x => x.primary.Value);
 
             if (results.forecast.datum.Any(x => results.sigstages.record.Value <= x.primary.Value))
                 viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Record;
@@ -90,6 +93,17 @@
 
             else if (results.forecast.datum.Any(x => results.sigstages.action.Value <= x.primary.Value))
                 viewModel.FloodingCategoryForecast = FloodingCategoryForecast.Action;
+
+            //var p = Fit.Line(Array.ConvertAll(Enumerable.Range(0, results.observed.Count()).ToArray(), x => (double)x), results.observed.Select(x => (double)x.primary.Value).ToArray());
+
+            var f = new Statistics().CalculateLinearRegression(results.observed.OrderBy(x => x.valid.Value).Where(x => x.valid.Value > DateTime.UtcNow.AddHours(-24)).Select(x => x.primary.Value).ToArray());
+            if (f.Slope > .01)
+                viewModel.Trend = WaterTrend.Rising;
+            else if (f.Slope < -.01)
+                viewModel.Trend = WaterTrend.Falling;
+            else
+                viewModel.Trend = WaterTrend.Steady;
+
 
             return viewModel;
         }

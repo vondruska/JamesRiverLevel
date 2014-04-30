@@ -30,7 +30,7 @@ position: absolute;
 .large {font-size: 7em; }
 .medium { font-size: 2em; }
 .bold { font-weight: bold; }
-#highchart {width: 800px; height: 400px;display: none; margin-top: 30px;}
+#highchart {width: 700px; height: 400px;display: none; margin-top: 30px;margin: 30px auto 0 auto;}
 footer {
     position: absolute; bottom: 0; margin: 0 auto; text-align: center; width: 99%; font-size: .8em; color: #aaa;
 }

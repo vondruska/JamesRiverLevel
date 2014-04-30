@@ -1,4 +1,5 @@
-﻿@using JamesRiverLevel.Models
+﻿@using JamesRiverLevel
+@using JamesRiverLevel.Models
 @model JamesRiverLevel.ViewModel.DisplayViewModel
 @{
     ViewBag.Title = "Index";
@@ -8,10 +9,10 @@
     switch (Model.ActionLevel)
     {
         case WaterLevelAction.LifeJacket:
-            @:warning
+@:warning
             break;
             case WaterLevelAction.Permit:
-            @:alert
+@:alert
             break;
     }
 }
@@ -21,45 +22,49 @@
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script> $(function() {
      $('#highchart').highcharts({
+         legend: false,
+         credits: false,
         title: {
             text: 'Water Level Forecast'
         },
         xAxis: {
-            type: 'datetime'
+            type: 'datetime',
+            plotLines:[{
+                value:@Model.WaterLevelWhen.ToUnixTimeMilliseconds(),
+                color: '#999',
+                width:2,
+                zIndex:10,
+                label:{text:'Current Water Level'}
+            }]
         },
         yAxis: {
             min: 0,
-            title: { text: 'water level (ft)' }/*,
-            plotBands: [{
-                    from: 9,
-                    to: 14,
-                    color: 'rgba(68, 170, 213, 0.2)',
-                    label: {
-                        text: 'Last quarter\'s value range'
-                    }
-                }, {
-                    from: 14,
-                    to: 20,
-                    color: 'rgba(68, 170, 213, 0.2)',
-                    label: {
-                        text: 'Last quarter\'s value range'
-                    }
+            title: { text: 'water level (ft)' },
+            plotLines:[{
+                value:5,
+                color: '#abb60d',
+                width:1,
+                zIndex:4,
+                label:{text:'Life Jacket Required'}
+            },
+                {
+                    value:9,
+                    color: '#a41717',
+                    width:1,
+                    zIndex:4,
+                    label:{text:'Permit Required'}
                 }
-            ]*/
+            ]
         },
         series: [{
                 data: [
                     @foreach (var item in Model.Observed)
                     {
-                        @:{
-                        @:x: new Date('@(item.Key.ToString())').getTime(), y: @(item.Value), color: '#333', name: 'Observed Water Level'
-                        @:},
+                        @:{x: @(item.Key.ToUnixTimeMilliseconds()), y: @(item.Value), color: '#333', name: 'Observed Water Level'},
                     }
                     @foreach (var item in Model.Future)
                     {
-                        @:{
-                        @:x: new Date('@(item.Key.ToString())').getTime(), y: @(item.Value)
-                        @:},
+                        @:{ x: @(item.Key.ToUnixTimeMilliseconds()), y: @(item.Value) },
                     }
                 ]
             }
@@ -83,12 +88,12 @@
     }
 
     <div class="container">
-        <span class="large bold @GetAlertClass()">@(Model.WaterLevel)@(Model.WaterLevelUnit)</span> <br /><span class="grey">as of @Model.WaterLevelWhen.ToString("MMMM dd, yyyy a\\t hh:mm tt")</span><br /><br />
+        <span class="large bold @GetAlertClass()">@(Model.WaterLevel)@(Model.WaterLevelUnit)</span> <br /><span class="grey"> and @Model.Trend.ToString().ToLower() as of <span title="@Model.WaterLevelWhen.ToString("MMMM dd, yyyy a\\t h:mm tt")">@Model.WaterLevelWhen.ToPrettyFormat()</span> ago</span><br /><br />
         
         @switch (Model.ActionLevel)
         {
             case WaterLevelAction.Permit:
-                <span class="medium">By law, you are required to <strong class="alert">have a permit to be on the river</strong>.</span>
+                <span class="medium">By law, <strong class="alert">no one is allowed on the river without a permit</strong>.</span>
                 break;
             case WaterLevelAction.LifeJacket:
                 <span class="medium">By law, you are required to <strong class="warning">wear a life jacket</strong>.</span>
@@ -118,10 +123,4 @@
     
 
 <footer>for informational use only. obey all posted signage and law enforcement personal. do not make life decisions based on this information obtained here.<br /><a href="http://water.weather.gov/ahps2/hydrograph.php?wfo=akq&gage=rmdv2" target="_blank">data from national weather service</a> | created by <a href="http://stevenvondruska.com/" target="_blank">steven vondruska</a></footer>
-
-    
-
-
-
-
     
