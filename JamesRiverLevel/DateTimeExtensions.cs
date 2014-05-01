@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace JamesRiverLevel
+﻿namespace JamesRiverLevel
 {
+    using System;
     using System.Text;
 
     public static class DateTimeExtensions
@@ -12,7 +8,7 @@ namespace JamesRiverLevel
         public static string ToPrettyFormat(this TimeSpan span)
         {
 
-            if (span == TimeSpan.Zero) return "0 minutes";
+            if (span == TimeSpan.Zero) return "now";
 
             var sb = new StringBuilder();
             if (span.Days > 0)
@@ -38,7 +34,7 @@ namespace JamesRiverLevel
         public static double ToUnixTime(this DateTime date)
         {
             var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            return Convert.ToInt64((date - epoch).TotalSeconds);
+            return Convert.ToInt64((date.ToUniversalTime() - epoch).TotalSeconds);
         }
 
         public static double ToUnixTimeMilliseconds(this DateTime date)

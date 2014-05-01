@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    @RenderBody()
+    <body>
+        <div id="wrapper" class="wrapper">
+            <div class="table-parent">
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </div>
+        
+            <footer>For informational use only. Obey all posted signage and law enforcement personal.<br />Use best judgement and do not make life decisions based on this information obtained here.<br /><a href="http://water.weather.gov/ahps2/hydrograph.php?wfo=akq&gage=rmdv2" target="_blank">Data from National Weather Service</a> | Created by <a href="http://stevenvondruska.com/" target="_blank">Steven Vondruska</a></footer>
+        </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
-</body>
+        @Scripts.Render("~/bundles/main")
+        @RenderSection("scripts", required: false)
+    </body>
 </html>

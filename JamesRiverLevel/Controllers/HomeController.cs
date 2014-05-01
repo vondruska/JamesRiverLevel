@@ -1,29 +1,47 @@
 ﻿namespace JamesRiverLevel.Controllers
 {
-    using System.Linq;
+    using System;
     using System.Web.Mvc;
-    using System.Xml;
-    using System.Xml.Serialization;
-
     using Helper;
-
-    using Models;
-
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     using ViewModel;
 
     public class HomeController : Controller
     {
-        #if !DEBUG
-        [OutputCache(Duration = 120)]
-        #endif
         public ActionResult Index()
         {
-            var results = NWS.GetRiverInformation();
-            return View(NWS.Parse(results));
+            if (HttpContext.Application["ViewModel"] == null
+                || ((DisplayViewModel)HttpContext.Application["ViewModel"]).DataObtainedAt.AddSeconds(300)
+                    < DateTime.Now)
+            {
+                var results = NWS.GetRiverInformation();
+
+                var viewModel = NWS.Parse(results);
+
+                HttpContext.Application["ViewModel"] = viewModel;
+            }
+
+            return HttpContext.Application["ViewModel"] == null ? View("Error") : View(HttpContext.Application["ViewModel"]);
         }
 
+        public ActionResult Error()
+        {
+            return View();
+        }
+
+        public ActionResult GetChartData()
+        {
+            if (HttpContext.Application["ViewModel"] == null
+                || ((DisplayViewModel)HttpContext.Application["ViewModel"]).DataObtainedAt.AddSeconds(300)
+                    < DateTime.Now)
+            {
+                var results = NWS.GetRiverInformation();
+
+                var viewModel = NWS.Parse(results);
+
+                HttpContext.Application["ViewModel"] = viewModel;
+            }
+
+            return HttpContext.Application["ViewModel"] == null ? View("Error") : View(HttpContext.Application["ViewModel"]);
+        }
     }
 }

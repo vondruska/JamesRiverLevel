@@ -9,6 +9,8 @@
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include("~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/main").Include("~/Scripts/main.js"));
+
             bundles.Add(
                 new ScriptBundle("~/bundles/jqueryval").Include(
                     "~/Scripts/jquery.unobtrusive*", "~/Scripts/jquery.validate*"));
@@ -17,7 +19,7 @@
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new LessBundle("~/Content/css").Include("~/Content/site.less"));
         }
     }
 }

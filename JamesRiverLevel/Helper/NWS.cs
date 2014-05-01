@@ -1,34 +1,22 @@
 ﻿namespace JamesRiverLevel.Helper
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using System.Net;
     using System.Xml;
     using System.Xml.Serialization;
-
-    using MathNet.Numerics;
-
     using Models;
-
     using ViewModel;
 
     public static class NWS
     {
         public static site GetRiverInformation()
         {
-            XmlSerializer ser = new XmlSerializer(typeof(site));
-            using (XmlReader reader = XmlReader.Create("http://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=rmdv2&output=xml"))
-            {
-                try
-                {
-                    return ser.Deserialize(reader) as site;
-                }
-                catch (XmlException)
-                {
-                    return null;
-                }
-            }
+            var request = WebRequest.Create("http://water.weather.gov/ahps2/hydrograph_to_xml.php?gage=rmdv2&output=xml");
+            request.Timeout = 1000;
+            var response = request.GetResponse();
+            return GetRiverInformation(response.GetResponseStream());
         }
 
         public static site GetRiverInformation(Stream stream)

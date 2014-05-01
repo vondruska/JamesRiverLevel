@@ -1,0 +1,64 @@
+﻿@using JamesRiverLevel
+@model JamesRiverLevel.ViewModel.DisplayViewModel
+@{ Layout = null; }
+
+var chart = new Highcharts.Chart({
+chart: {
+    renderTo: 'chart'
+},
+legend: false,
+credits: false,
+title: {
+    text: 'Water Level Forecast'
+},
+xAxis: {
+    type: 'datetime',
+    plotLines:[{
+        value:@Model.WaterLevelWhen.ToUnixTimeMilliseconds(),
+        color: '#999',
+        width:2,
+        zIndex:10,
+        label:{text:'Current Water Level'}
+    }]
+},
+yAxis: {
+    min: 0,
+    title: { text: 'water level (ft)' },
+    plotLines:[{
+        value:5,
+        color: '#abb60d',
+        width:1,
+        zIndex:4,
+        label:{text:'Life Jacket Required'}
+    },
+        {
+            value:9,
+            color: '#a41717',
+            width:1,
+            zIndex:4,
+            label:{text:'Permit Required'}
+        }
+    ]
+},
+series: [{
+        data: [
+            @foreach (var item in Model.Observed)
+            {
+                @:{x: @(item.Key.ToUnixTimeMilliseconds()), y: @(item.Value), color: '#333', name: 'Observed Water Level'},
+            }
+            @foreach (var item in Model.Future)
+            {
+                @:{ x: @(item.Key.ToUnixTimeMilliseconds()), y: @(item.Value) },
+            }
+        ]
+    }
+],
+tooltip: {
+    pointFormat: '<b>{point.y:.2f}</b> ft'
+},
+plotOptions: {
+    series: {
+        animation: false
+    }
+}
+});
