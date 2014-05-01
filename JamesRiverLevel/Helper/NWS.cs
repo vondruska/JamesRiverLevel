@@ -57,6 +57,7 @@
             if (results == null) return null;
 
             var viewModel = new DisplayViewModel();
+            viewModel.DataObtainedAt = DateTime.Now;
             var test = results.observed.OrderByDescending(x => x.valid.Value).First();
 
             viewModel.WaterLevel = test.primary.Value;

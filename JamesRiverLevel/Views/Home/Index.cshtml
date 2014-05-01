@@ -88,7 +88,7 @@
     }
 
     <div class="container">
-        <span class="large bold @GetAlertClass()">@(Model.WaterLevel)@(Model.WaterLevelUnit)</span> <br /><span class="grey"> and @Model.Trend.ToString().ToLower() as of <span title="@Model.WaterLevelWhen.ToString("MMMM dd, yyyy a\\t h:mm tt")">@Model.WaterLevelWhen.ToPrettyFormat()</span> ago</span><br /><br />
+        <span class="large bold @GetAlertClass()">@(Model.WaterLevel)@(Model.WaterLevelUnit)</span> <br /><span class="grey"> and @Model.Trend.ToString().ToLower() as of <span title="@Model.WaterLevelWhen.ToString("MMMM dd, yyyy a\\t h:mm tt")">@Model.WaterLevelWhenUtc.ToPrettyFormat()</span> ago</span><br /><br />
         
         @switch (Model.ActionLevel)
         {
@@ -124,3 +124,4 @@
 
 <footer>for informational use only. obey all posted signage and law enforcement personal. do not make life decisions based on this information obtained here.<br /><a href="http://water.weather.gov/ahps2/hydrograph.php?wfo=akq&gage=rmdv2" target="_blank">data from national weather service</a> | created by <a href="http://stevenvondruska.com/" target="_blank">steven vondruska</a></footer>
     
+<!-- Generated at @DateTime.Now.ToString()  NWS Data from @Model.DataObtainedAt.ToString() -->

@@ -24,5 +24,7 @@
         public Dictionary<DateTime, float> Observed { get; set; }
 
         public WaterTrend Trend { get; set; }
+
+        public DateTime DataObtainedAt { get; set; }
     }
 }
