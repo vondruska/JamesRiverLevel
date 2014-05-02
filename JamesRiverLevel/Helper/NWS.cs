@@ -85,10 +85,10 @@
 
             //var p = Fit.Line(Array.ConvertAll(Enumerable.Range(0, results.observed.Count()).ToArray(), x => (double)x), results.observed.Select(x => (double)x.primary.Value).ToArray());
 
-            var f = new Statistics().CalculateLinearRegression(results.observed.OrderBy(x => x.valid.Value).Where(x => x.valid.Value > DateTime.UtcNow.AddHours(-24)).Select(x => x.primary.Value).ToArray());
-            if (f.Slope > .01)
+            var f = new Statistics().CalculateLinearRegression(results.observed.OrderBy(x => x.valid.Value).Where(x => x.valid.Value > DateTime.UtcNow.AddHours(-15)).Select(x => x.primary.Value).ToArray());
+            if (f.Slope > .25)
                 viewModel.Trend = WaterTrend.Rising;
-            else if (f.Slope < -.01)
+            else if (f.Slope < -.25)
                 viewModel.Trend = WaterTrend.Falling;
             else
                 viewModel.Trend = WaterTrend.Steady;
